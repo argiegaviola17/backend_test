@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Get,
   Post,
   UseGuards,
 } from '@nestjs/common';
@@ -14,7 +15,10 @@ import { MainService } from './main.service';
 export class MainController {
   constructor(private readonly mainService: MainService) {}
 
-   
+  @Get("")
+  test(){
+    return "test backend by argie gaviola"
+  }
 
   @Post('message')
   findOne(
